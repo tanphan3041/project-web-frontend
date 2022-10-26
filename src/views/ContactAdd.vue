@@ -1,11 +1,11 @@
 <template>
-   <div 
+   <div
       class="page"
    >
       <h4>Thêm Liên hệ</h4>
       <ContactForm 
-         :contact="contact" 
-         @submit:contact="goToAddContact" 
+         :contact="onAddContact"
+         @submit:contact="onAddContact" 
       />
       <p>{{ message }}</p>
    </div>
@@ -25,7 +25,7 @@ export default {
       };
    },
    methods: {
-      async goToAddContact(contact) {
+      async onAddContact(contact) {
          try {
             await contactService.create(contact)
             this.message = 'Liên hệ được thêm thành công.';
@@ -34,9 +34,9 @@ export default {
          }
       },
    },
-   created() {
-      this.getContact(this.contactId);
-      this.message = '';
-   },
+//   created() {
+//      this.onAddContact(this.contact);
+//      this.message = '';
+//   },
 };
 </script>

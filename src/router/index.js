@@ -22,7 +22,7 @@ const routes = [
    {
       path: '/contacts',
       name: 'contact.add',
-      component: () => import('@/views/ContactAdd.vue'),
+      component: () => import('@/views/ContactAdd.vue')
    },
 ];
 

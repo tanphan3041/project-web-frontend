@@ -32,11 +32,11 @@
 				>
 					<button
 						class="btn btn-sm btn-success"
-						@click="goToAddContact"
+						
 					>
 						<i class="fas fa-plus" /> Thêm mới
 					</button>
-					</router-link>
+				</router-link>
 				
 				<button
 					class="btn btn-sm btn-danger"
@@ -145,9 +145,9 @@
 				}
 			},
 			
-			goToAddContact() {
-				this.$router.push({ name: 'contact.add' });
-			},
+//			goToAddContact() {
+//				this.$router.push({ name: 'contact.add' });
+//			},
 		},
 		mounted() {
 			this.refreshList();
