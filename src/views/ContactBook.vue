@@ -24,14 +24,20 @@
 				>
 					<i class="fas fa-redo" /> Làm mới
 				</button>
-			
-				<button
-					class="btn btn-sm btn-success"
-					@click="goToAddContact"
+				
+				<router-link
+					:to="{
+						name: 'contact.add'
+					}"
 				>
-					<i class="fas fa-plus" /> Thêm mới
-				</button>
-			
+					<button
+						class="btn btn-sm btn-success"
+						@click="goToAddContact"
+					>
+						<i class="fas fa-plus" /> Thêm mới
+					</button>
+					</router-link>
+				
 				<button
 					class="btn btn-sm btn-danger"
 					@click="onDeleteContacts"
@@ -56,6 +62,7 @@
 					<span class="mt-2 badge badge-warning">
 						<i class="fas fa-edit" /> Hiệu chỉnh</span>
 				</router-link>
+
 			</div>
 		</div>
 	</div>
